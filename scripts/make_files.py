@@ -27,7 +27,7 @@ elif filetype == "SCF":
 for rho in densities:
     for temp in temps:
 
-        path = cwd + "../data/rho_" + str(rho)
+        path = cwd + "../data/raw/rho_" + str(rho)
 
         if os.path.exists(path):
             os.chdir(path)
@@ -42,7 +42,7 @@ for rho in densities:
         os.chdir(Tpath)
 
         # copy the template
-        os.popen("cp ../../He" + extension + "_template.py He" + extension + ".py")
+        os.popen("cp ../../../He" + extension + "_template.py He" + extension + ".py")
         new_cwd = os.getcwd() + "/"
 
         time.sleep(0.1)
